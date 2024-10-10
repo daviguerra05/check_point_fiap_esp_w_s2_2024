@@ -3,9 +3,9 @@ Projeto Checkpoint para a disciplina de "Domain Driven Design com Java", para os
 
 Por: Professor Fellipe Souto.
 
-Rui Amorim Siqueira
-Davi Passanha de Sousa Guerra
-Luan Silveira Macea
+Rui Amorim Siqueira RM98436
+Davi Passanha de Sousa Guerra RM551605
+Luan Silveira Macea RM98290
 
 ## Árvore de Projetos
 
