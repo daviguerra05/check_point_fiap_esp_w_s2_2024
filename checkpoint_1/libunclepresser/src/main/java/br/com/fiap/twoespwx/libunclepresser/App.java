@@ -3,12 +3,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
- * Grupo: Batata Doce
+ * Grupo: Davi RM:551605, Rui RM:98436 e Luan RM:98290
  * Autores: 
- *      - João da Silva     -   jaodasilva@example.com
- *      - Jose da Silva     -   zedasilva@example.com
- *      - Maria da Silva    -   marydasilva@example.com
- *      - Monica da Silva   -   nicadasilva@example.com
+ *      - Davi Passanha     -   rm551605@fiap.com.br
+ *      - Rui Siqueira     -   rm98436@fiap.com.br
+ *      - Luan Macea    -   rm98290@fiap.com.br
  */
 
 package br.com.fiap.twoespwx.libunclepresser;
