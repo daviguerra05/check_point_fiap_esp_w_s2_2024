@@ -21,7 +21,7 @@ import java.io.IOException;
 public class App 
 {
     // Função para comprimir o input string
-    private static String comprimir(String input){
+    public static String comprimir(String input){
         //String de output vazia
         String output="";
         //int para contagem de repetições
@@ -86,7 +86,6 @@ public class App
             System.out.println("Uso correto: java <caminho_javafile> <caminho_entrada> <caminho_saida>");
             return;
         }
-
         System.out.println("LIB UNCLE PRESSER - GRUPO Davi RM:551605, Rui RM:98436 e Luan RM:98290");
         processarInput(args[0],args[1]);
     }
