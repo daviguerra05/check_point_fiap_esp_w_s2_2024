@@ -20,40 +20,51 @@ import java.io.IOException;
 
 public class App 
 {
+    // Função para comprimir o input string
     private static String comprimir(String input){
+        //String de output vazia
         String output="";
+        //int para contagem de repetições
         int contagem=1;
+        //iteração principal para comprimir input
         for (int i = 1; i < input.length(); i++) {
-            char last_char = input.charAt(i-1);
-            char current_char = input.charAt(i);
+            //Armazena os caracteres
+            char char_anterior = input.charAt(i-1);
+            char char_atual = input.charAt(i);
             // Verifica se o char atual é igual ao anterior
-            if (last_char==current_char){
+            if (char_anterior==char_atual){
+                //Adiciona 1 à contagem
                 contagem++;
+                //Verifica se é o último caractere
                 if(i==input.length()-1){
-                    output += current_char + String.valueOf(contagem);
+                    output += char_atual + String.valueOf(contagem);
                 }
             }
             else{
-                output += last_char + String.valueOf(contagem);
+                //Adiciona ao output o caracter e sua respectiva contagem
+                output += char_anterior + String.valueOf(contagem);
                 contagem=1;
+                //Verifica se é o último caractere
                 if(i==input.length()-1){
-                    output += current_char + "1";
+                    output += char_atual + "1";
                 }
             }
         }    
         return output;
     }
     
+    // Função para processar um arquvio .txt e escrever um novo .txt
     private static void processarInput(String caminhoInput, String caminhoOutput){
         // Leitura do arquivo de entrada e processamento
         try (BufferedReader reader = new BufferedReader(new FileReader(caminhoInput));
              BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoOutput))) {
             
+            //Variavel para armazenar valor da linha atual
             String linha;
             
             // Lê cada linha do arquivo de entrada
             while ((linha = reader.readLine()) != null) {
-                // Aqui você pode processar a linha como desejar
+                //Aplica processamento da linha
                 String linhaProcessada = comprimir(linha);
                 
                 // Escreve a linha processada no arquivo de saída
@@ -72,7 +83,7 @@ public class App
     {   
         // Verificar se os argumentos foram fornecidos
         if (args.length < 2) {
-            System.out.println("Uso correto: java -jar <jarfile> <caminho_entrada> <caminho_saida>");
+            System.out.println("Uso correto: java <caminho_javafile> <caminho_entrada> <caminho_saida>");
             return;
         }
 
