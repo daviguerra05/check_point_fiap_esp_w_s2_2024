@@ -3,8 +3,6 @@ package br.com.fiap.twoespwx.libunclepresser;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import br.com.fiap.twoespwx.libunclepresser.App;
-
 /**
  * Unit test for simple App.
  */
