@@ -1,5 +1,5 @@
 # Checkpoint Fiap ESPW [s2/2024]
-Projeto Checkpoint para a disciplina de "Domain Driven Design com Java", para os cursos de Engenharia de Software - FIAP/SP (Turmas W && X), 2024. 
+Projeto Checkpoint para a disciplina de "Domain Driven Design com Java", para os cursos de Engenharia de Software - FIAP/SP Turma W , 2024. 
 
 Por: Professor Fellipe Souto.
 
