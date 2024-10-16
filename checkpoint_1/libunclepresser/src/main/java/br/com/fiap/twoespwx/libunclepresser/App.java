@@ -18,7 +18,7 @@ public class App
         public static void main(String[] args)
     {   
         // Verificar se os argumentos foram fornecidos
-        if (args.length < 2) {
+        if (args.length != 2) {
             System.out.println("Uso correto: java <caminho_javafile> <caminho_entrada> <caminho_saida>");
             return;
         }
