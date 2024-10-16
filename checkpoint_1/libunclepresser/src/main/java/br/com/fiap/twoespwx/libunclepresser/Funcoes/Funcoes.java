@@ -8,16 +8,19 @@ import java.io.IOException;
 import java.io.File;
 
 public class Funcoes {
+    // Função para retornar tamanho em bytes de um arquivo
     private static long ler_tamanho_arquivo(String file_path){
         File file = new File(file_path);
         return file.length(); // Tamanho em bytes
     }
     
+    // Função para retornar o nome do arquivo
     private static String ler_nome_arquivo(String file_path){
         File file = new File(file_path);
         return file.getName();
     }
 
+    // Função para retornar o total de caracteres em um arquivo .txt
     private static int ler_total_chars(String txt_path){
         int total = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(txt_path))) {
@@ -34,11 +37,13 @@ public class Funcoes {
         return total;
     }
 
+    // Função para calcular a compressão do arquivo
     private static double calcular_compression_ratio(long size_i, long size_f){
         double cr = (double) size_f*100/size_i;
         return cr;
     }
 
+    // Função para calcular as frequencias
     private static double[] calcular_freq(String file_path){
         int num_a = 0;
         int num_c = 0;
@@ -79,21 +84,22 @@ public class Funcoes {
     // Função para gerar o relatório
     public static void relatorio(String input_filepath, String output_filepath){
         //Variáveis do relatório
+        //Nomes dos arquivos
         String input_filename = ler_nome_arquivo(input_filepath);
         String output_filename = ler_nome_arquivo(output_filepath);
-        
+        //Tamanho dos arquivos
         long input_filesize = ler_tamanho_arquivo(input_filepath);
         long output_filesize =  ler_tamanho_arquivo(output_filepath);
         String compression_ratio = String.format("%.2f", calcular_compression_ratio(input_filesize, output_filesize)) + "%";
-
+        //Caracteres totais
         String total_input_chars = String.valueOf(ler_total_chars(input_filepath));
-
+        //Frequencias
         double[] frequencias = calcular_freq(input_filepath); 
         String freq_a = frequencias[0] + "%";
         String freq_c = frequencias[1] + "%";
         String freq_t = frequencias[2] + "%";
         String freq_g = frequencias[3] + "%";
-
+        //Score
         String score =  "WELL-DONE";
 
         //Print do relatório
