@@ -22,7 +22,8 @@ public class App
             System.out.println("Uso correto: java <caminho_javafile> <caminho_entrada> <caminho_saida>");
             return;
         }
-        System.out.println("LIB UNCLE PRESSER - GRUPO Davi RM:551605, Rui RM:98436 e Luan RM:98290");
+
         Funcoes.processarInput(args[0],args[1]);
+        Funcoes.relatorio(args[0],args[1]);
     }
 }
