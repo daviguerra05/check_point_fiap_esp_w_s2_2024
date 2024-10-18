@@ -14,6 +14,6 @@ public class Funcoes {
             sb.append(CHARACTERS.charAt(index));
         }
 
-        return sb.toString(); // Retorna a string gerada
+        return sb.toString();
     }
 }

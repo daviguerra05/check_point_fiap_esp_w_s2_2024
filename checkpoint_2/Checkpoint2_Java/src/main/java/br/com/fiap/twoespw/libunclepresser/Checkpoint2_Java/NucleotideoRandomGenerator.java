@@ -17,15 +17,15 @@ public class NucleotideoRandomGenerator {
 		while (!validInput) {
 			System.out.print("Digite o tamanho da sequência: ");
 			try {
-				sequenceSize = scanner.nextInt(); // Lê o número digitado pelo usuário
+				sequenceSize = scanner.nextInt();
 				if (sequenceSize <= 0) {
 					System.out.println("Por favor, digite um número positivo.");
 				} else {
-					validInput = true; // Entrada válida
+					validInput = true;
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("Valor provido foi inválido. Tente novamente.");
-				scanner.next(); // Limpa a entrada inválida
+				scanner.next();
 			}
 		}
 

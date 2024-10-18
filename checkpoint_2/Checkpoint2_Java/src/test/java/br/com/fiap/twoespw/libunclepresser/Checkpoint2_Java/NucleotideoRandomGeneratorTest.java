@@ -15,12 +15,12 @@ public class NucleotideoRandomGeneratorTest {
 
 	@Test
 	void testGenerateRandomString() {
-		int sequenceSize = 10; // Tamanho da sequência a ser testado
+		int sequenceSize = 10; // Tamanho da sequencia a ser testado
 		String randomString = Funcoes.generate(sequenceSize);
 
 		// Verifica se a string gerada tem o tamanho correto
 		assertEquals(sequenceSize, randomString.length(), "A sequência gerada não tem o tamanho esperado.");
-		// Verifica se todos os caracteres estão dentro do conjunto permitido
+		// Verifica se todos as letras estão no conjunto permitido
 		for (char c : randomString.toCharArray()) {
 			assertTrue("ACTG".indexOf(c) != -1, "A sequência contém um caractere inválido: " + c);
 		}
