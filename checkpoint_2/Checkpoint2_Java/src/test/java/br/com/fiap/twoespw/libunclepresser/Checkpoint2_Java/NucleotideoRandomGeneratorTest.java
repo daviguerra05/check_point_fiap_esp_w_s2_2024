@@ -1,5 +1,6 @@
 package br.com.fiap.twoespw.libunclepresser.Checkpoint2_Java;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
@@ -18,8 +19,7 @@ public class NucleotideoRandomGeneratorTest {
 		String randomString = Funcoes.generate(sequenceSize);
 
 		// Verifica se a string gerada tem o tamanho correto
-		assertTrue(randomString.length() == sequenceSize, "A sequência gerada não tem o tamanho esperado.");
-
+		assertEquals(sequenceSize, randomString.length(), "A sequência gerada não tem o tamanho esperado.");
 		// Verifica se todos os caracteres estão dentro do conjunto permitido
 		for (char c : randomString.toCharArray()) {
 			assertTrue("ACTG".indexOf(c) != -1, "A sequência contém um caractere inválido: " + c);
